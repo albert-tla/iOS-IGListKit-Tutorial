@@ -65,3 +65,19 @@ class FeedViewController: UIViewController {
         collectionView.frame = view.bounds
     }
 }
+
+// MARK: - ListAdapterDataSource
+extension FeedViewController: ListAdapterDataSource {
+    
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return loader.entries
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        <#code#>
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        <#code#>
+    }
+}
