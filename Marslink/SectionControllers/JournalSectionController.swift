@@ -34,5 +34,9 @@ class JournalSectionController: IGListSectionController {
     var entry: JournalEntry!
     let solFormatter = SolFormatter()
     
-    
+    override init() {
+        super.init()
+        
+        inset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
+    }
 }
