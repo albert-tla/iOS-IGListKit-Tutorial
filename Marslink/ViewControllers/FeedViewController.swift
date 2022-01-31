@@ -78,6 +78,6 @@ extension FeedViewController: ListAdapterDataSource {
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        <#code#>
+        return nil
     }
 }
