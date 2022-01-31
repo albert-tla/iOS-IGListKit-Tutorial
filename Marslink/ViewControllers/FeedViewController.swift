@@ -30,10 +30,12 @@ import UIKit
 
 class FeedViewController: UIViewController {
 
+    let loader = JournalEntryLoader()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loader.loadLatest()
     }
     
 
