@@ -29,7 +29,7 @@
 import UIKit
 import IGListKit
 
-class JournalSectionController: IGListSectionController {
+class JournalSectionController: ListSectionController {
 
     var entry: JournalEntry!
     let solFormatter = SolFormatter()
@@ -39,4 +39,9 @@ class JournalSectionController: IGListSectionController {
         
         inset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
     }
+}
+
+// MARK: - Data Provider
+extension JournalSectionController {
+    
 }
