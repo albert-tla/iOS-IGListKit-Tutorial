@@ -27,26 +27,31 @@
 /// THE SOFTWARE.
 
 import UIKit
+import IGListKit
 
 class FeedViewController: UIViewController {
 
     let loader = JournalEntryLoader()
     
+    let collectionView: UICollectionView = {
+        
+        let view = UICollectionView(frame: .zero,
+                                    collectionViewLayout: UICollectionViewLayout())
+        
+        view.backgroundColor = .black
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loader.loadLatest()
+        view.addSubview(collectionView)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        collectionView.frame = view.bounds
     }
-    */
-
 }
