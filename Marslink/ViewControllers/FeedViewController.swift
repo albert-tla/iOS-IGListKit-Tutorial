@@ -54,6 +54,9 @@ class FeedViewController: UIViewController {
 
         loader.loadLatest()
         view.addSubview(collectionView)
+        
+        adapter.collectionView = collectionView
+        adapter.dataSource = self
     }
     
     override func viewDidLayoutSubviews() {
