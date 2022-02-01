@@ -57,5 +57,7 @@ extension JournalSectionController {
     }
     
     override func didUpdate(to object: Any) {
+        
+        entry = object as? JournalEntry
     }
 }
