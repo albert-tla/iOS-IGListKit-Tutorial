@@ -53,7 +53,9 @@ extension JournalSectionController {
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        let cellClass: AnyClass = index == 0 ? JournalEntryDateCell.self : JournalEntryCell.self
+        
     }
     
     override func didUpdate(to object: Any) {
