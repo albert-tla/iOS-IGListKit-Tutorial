@@ -44,4 +44,7 @@ class JournalSectionController: ListSectionController {
 // MARK: - Data Provider
 extension JournalSectionController {
     
+    override func numberOfItems() -> Int {
+        return 2
+    }
 }
