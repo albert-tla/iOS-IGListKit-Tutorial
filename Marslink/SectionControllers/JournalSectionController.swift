@@ -60,6 +60,13 @@ extension JournalSectionController {
                                                           for: self,
                                                           at: index)
         
+        if let cell = cell as? JournalEntryDateCell {
+            cell.label.text = "SOL \(solFormatter.sols(fromDate: entry.date))"
+        } else if let cell = cell as? JournalEntryCell {
+            cell.label.text = entry.text
+        }
+        
+        return cell
     }
     
     override func didUpdate(to object: Any) {
