@@ -31,4 +31,6 @@ import IGListKit
 
 class MessageSectionController: ListSectionController {
 
+    var message: Message!
+    
 }
