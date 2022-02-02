@@ -100,6 +100,9 @@ extension WeatherSectionController {
                 title = "n/a"
                 detail = "n/a"
             }
+            
+            cell.titleLabel.text = title
+            cell.detailLabel.text = detail
         }
         
         return cell
