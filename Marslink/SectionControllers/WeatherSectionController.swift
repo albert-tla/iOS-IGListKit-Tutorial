@@ -82,6 +82,14 @@ extension WeatherSectionController {
         } else if let cell = cell as? WeatherDetailCell {
             
             let title: String, detail: String
+            
+            switch index {
+            case 1:
+                title = "Sunrise"
+                detail = weather.sunrise
+            default:
+                <#code#>
+            }
         }
         
         return cell
