@@ -53,4 +53,11 @@ extension WeatherSectionController {
     override func numberOfItems() -> Int {
         return expanded ? 5 : 1
     }
+    
+    override func sizeForItem(at index: Int) -> CGSize {
+        
+        guard let context = collectionContext else {
+            return .zero
+        }
+    }
 }
