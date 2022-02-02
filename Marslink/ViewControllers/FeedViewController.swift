@@ -50,6 +50,8 @@ class FeedViewController: UIViewController {
     
     let pathfinder = Pathfinder()
     
+    let wxScanner = WxScanner()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
