@@ -56,7 +56,7 @@ extension JournalSectionController {
         
         let cellClass: AnyClass = index == 0 ? JournalEntryDateCell.self : JournalEntryCell.self
         
-        let cell = collectionContext?.dequeueReusableCell(of: cellClass,
+        let cell = collectionContext!.dequeueReusableCell(of: cellClass,
                                                           for: self,
                                                           at: index)
         
