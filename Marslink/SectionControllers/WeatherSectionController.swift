@@ -107,4 +107,12 @@ extension WeatherSectionController {
         
         return cell
     }
+    
+    override func didSelectItem(at index: Int) {
+        
+        collectionContext?.performBatch(animated: true, updates: { batchContext in
+            
+            self.expanded.toggle()
+        }, completion: nil)
+    }
 }
