@@ -36,7 +36,7 @@ class FeedViewController: UIViewController {
     let collectionView: UICollectionView = {
         
         let view = UICollectionView(frame: .zero,
-                                    collectionViewLayout: UICollectionViewLayout())
+                                    collectionViewLayout: UICollectionViewFlowLayout())
         
         view.backgroundColor = .black
         return view
