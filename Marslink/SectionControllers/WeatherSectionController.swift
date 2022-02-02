@@ -90,6 +90,9 @@ extension WeatherSectionController {
             case 2:
                 title = "Sunset"
                 detail = weather.sunset
+            case 3:
+                title = "High"
+                detail = "\(weather.high) C"
             default:
                 <#code#>
             }
