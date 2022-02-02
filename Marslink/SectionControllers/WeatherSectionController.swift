@@ -31,4 +31,6 @@ import IGListKit
 
 class WeatherSectionController: ListSectionController {
 
+    var weather: Weather!
+    
 }
