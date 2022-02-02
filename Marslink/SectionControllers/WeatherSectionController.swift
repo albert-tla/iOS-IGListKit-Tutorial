@@ -59,5 +59,13 @@ extension WeatherSectionController {
         guard let context = collectionContext else {
             return .zero
         }
+        
+        let width = context.containerSize.width
+        
+        if index == 0 {
+            return CGSize(width: width, height: 70)
+        } else {
+            return CGSize(width: width, height: 40)
+        }
     }
 }
