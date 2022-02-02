@@ -77,5 +77,12 @@ extension WeatherSectionController {
                                                           for: self,
                                                           at: index)
         
+        if let cell = cell as? WeatherSummaryCell {
+            cell.setExpanded(expanded)
+        } else if let cell = cell as? WeatherDetailCell {
+            
+        }
+        
+        return cell
     }
 }
