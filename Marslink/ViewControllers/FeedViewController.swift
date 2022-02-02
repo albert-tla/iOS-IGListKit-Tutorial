@@ -60,6 +60,9 @@ class FeedViewController: UIViewController {
         
         adapter.collectionView = collectionView
         adapter.dataSource = self
+        
+        pathfinder.delegate = self
+        pathfinder.connect()
     }
     
     override func viewDidLayoutSubviews() {
