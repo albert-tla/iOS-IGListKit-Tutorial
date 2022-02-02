@@ -74,8 +74,9 @@ extension FeedViewController: ListAdapterDataSource {
     
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         
-        var items: [ListDiffable] = pathfinder.messages
+        var items: [ListDiffable] = [wxScanner.currentWeather]
         items += loader.entries as [ListDiffable]
+        items += pathfinder.messages as [ListDiffable]
         return items
     }
     
