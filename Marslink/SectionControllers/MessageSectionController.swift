@@ -39,3 +39,18 @@ class MessageSectionController: ListSectionController {
         inset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
     }
 }
+
+// MARK: Data Provider
+extension MessageSectionController {
+    
+    override func sizeForItem(at index: Int) -> CGSize {
+        
+        guard let context = collectionContext else {
+            return .zero
+        }
+        
+        let width = context.containerSize.width
+        
+        return MessageCell.cellSize(width: width, text: message.text)
+    }
+}
