@@ -42,3 +42,11 @@ class WeatherSectionController: ListSectionController {
     }
     
 }
+
+// MARK: Data Provider
+extension WeatherSectionController {
+    
+    override func didUpdate(to object: Any) {
+        weather = object as? Weather
+    }
+}
