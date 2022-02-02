@@ -49,7 +49,12 @@ extension JournalSectionController {
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return .zero
+        
+        guard let context = collectionContext,
+              let entry = entry
+        else {
+            return .zero
+        }
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
