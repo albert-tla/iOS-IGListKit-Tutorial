@@ -107,3 +107,11 @@ extension FeedViewController: ListAdapterDataSource {
         return nil
     }
 }
+
+// MARK: PathfinderDelegate
+extension FeedViewController: PathfinderDelegate {
+    
+    func pathfinderDidUpdateMessages(pathfinder: Pathfinder) {
+        adapter.performUpdates(animated: true)
+    }
+}
