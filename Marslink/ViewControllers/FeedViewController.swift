@@ -71,7 +71,10 @@ class FeedViewController: UIViewController {
 extension FeedViewController: ListAdapterDataSource {
     
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return loader.entries
+        
+        var items: [ListDiffable] = pathfinder.messages
+        items += loader.entries as [ListDiffable]
+        return items
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
