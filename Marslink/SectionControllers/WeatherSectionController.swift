@@ -35,4 +35,10 @@ class WeatherSectionController: ListSectionController {
     
     var expanded = false
     
+    override init() {
+        super.init()
+        
+        inset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
+    }
+    
 }
