@@ -68,4 +68,14 @@ extension WeatherSectionController {
             return CGSize(width: width, height: 40)
         }
     }
+    
+    override func cellForItem(at index: Int) -> UICollectionViewCell {
+        
+        let cellClass = WeatherSummaryCell.self
+        
+        let cell = collectionContext!.dequeueReusableCell(of: cellClass,
+                                                          for: self,
+                                                          at: index)
+        
+    }
 }
