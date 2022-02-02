@@ -71,7 +71,7 @@ extension WeatherSectionController {
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         
-        let cellClass = WeatherSummaryCell.self
+        let cellClass = index == 0 ? WeatherSummaryCell.self : WeatherDetailCell.self
         
         let cell = collectionContext!.dequeueReusableCell(of: cellClass,
                                                           for: self,
