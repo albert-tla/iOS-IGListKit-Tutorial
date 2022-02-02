@@ -77,7 +77,17 @@ extension FeedViewController: ListAdapterDataSource {
         var items: [ListDiffable] = [wxScanner.currentWeather]
         items += loader.entries as [ListDiffable]
         items += pathfinder.messages as [ListDiffable]
-        return items
+        
+        return items.sorted { (left: Any, right: Any) -> Bool in
+            
+            guard let left = left as? DateSortable,
+                  let right = right as? DateSortable
+            else {
+                return false
+            }
+            
+            return left.date > right.date
+        }
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
