@@ -34,6 +34,7 @@
 		5E87904427A81D0300746048 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87904327A81D0300746048 /* FeedViewController.swift */; };
 		5E87904627A829D500746048 /* JournalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87904527A829D500746048 /* JournalSectionController.swift */; };
 		AABDD19627AA2A35005A33B5 /* MessageSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDD19527AA2A35005A33B5 /* MessageSectionController.swift */; };
+		AABDD19827AA3281005A33B5 /* WeatherSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDD19727AA3281005A33B5 /* WeatherSectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		5E87904327A81D0300746048 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		5E87904527A829D500746048 /* JournalSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalSectionController.swift; sourceTree = "<group>"; };
 		AABDD19527AA2A35005A33B5 /* MessageSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSectionController.swift; sourceTree = "<group>"; };
+		AABDD19727AA3281005A33B5 /* WeatherSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSectionController.swift; sourceTree = "<group>"; };
 		B9EFE4AB43572E52A0685AB4 /* Pods-Marslink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marslink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marslink/Pods-Marslink.debug.xcconfig"; sourceTree = "<group>"; };
 		C715FCAFBD8A3010CBEC1EE4 /* Pods_Marslink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marslink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3FA05C5618EC7BE0845CC7 /* Pods-Marslink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marslink.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marslink/Pods-Marslink.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				5E87904527A829D500746048 /* JournalSectionController.swift */,
 				AABDD19527AA2A35005A33B5 /* MessageSectionController.swift */,
+				AABDD19727AA3281005A33B5 /* WeatherSectionController.swift */,
 			);
 			name = SectionControllers;
 			path = Marslink/SectionControllers;
@@ -338,6 +341,7 @@
 				29E2CDED1DC7B4CF00A9E0F4 /* CustomNavigationBar.swift in Sources */,
 				AABDD19627AA2A35005A33B5 /* MessageSectionController.swift in Sources */,
 				29E2CDDA1DC7B4CF00A9E0F4 /* DateSortable.swift in Sources */,
+				AABDD19827AA3281005A33B5 /* WeatherSectionController.swift in Sources */,
 				29E2CDDF1DC7B4CF00A9E0F4 /* Weather.swift in Sources */,
 				29E2CDE91DC7B4CF00A9E0F4 /* Theme.swift in Sources */,
 				29E2CDEB1DC7B4CF00A9E0F4 /* ClassicFeedViewController.swift in Sources */,
