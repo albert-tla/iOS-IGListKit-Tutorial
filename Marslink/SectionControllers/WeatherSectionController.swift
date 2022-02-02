@@ -49,4 +49,8 @@ extension WeatherSectionController {
     override func didUpdate(to object: Any) {
         weather = object as? Weather
     }
+    
+    override func numberOfItems() -> Int {
+        return expanded ? 5 : 1
+    }
 }
