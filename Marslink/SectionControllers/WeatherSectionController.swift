@@ -33,4 +33,6 @@ class WeatherSectionController: ListSectionController {
 
     var weather: Weather!
     
+    var expanded = false
+    
 }
