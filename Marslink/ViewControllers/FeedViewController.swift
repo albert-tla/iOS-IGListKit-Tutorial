@@ -48,6 +48,7 @@ class FeedViewController: UIViewController {
                            workingRangeSize: 0)
     }()
     
+    let pathfinder = Pathfinder()
     
     override func viewDidLoad() {
         super.viewDidLoad()
