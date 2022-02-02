@@ -81,6 +81,7 @@ extension WeatherSectionController {
             cell.setExpanded(expanded)
         } else if let cell = cell as? WeatherDetailCell {
             
+            let title: String, detail: String
         }
         
         return cell
