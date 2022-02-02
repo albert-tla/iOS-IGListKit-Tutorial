@@ -87,6 +87,9 @@ extension WeatherSectionController {
             case 1:
                 title = "Sunrise"
                 detail = weather.sunrise
+            case 2:
+                title = "Sunset"
+                detail = weather.sunset
             default:
                 <#code#>
             }
