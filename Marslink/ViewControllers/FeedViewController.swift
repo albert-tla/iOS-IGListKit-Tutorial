@@ -93,6 +93,8 @@ extension FeedViewController: ListAdapterDataSource {
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if object is Message {
             return MessageSectionController()
+        } else if object is Weather {
+            return WeatherSectionController()
         } else {
             return JournalSectionController()
         }
