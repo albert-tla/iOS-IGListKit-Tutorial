@@ -53,4 +53,21 @@ extension MessageSectionController {
         
         return MessageCell.cellSize(width: width, text: message.text)
     }
+    
+    override func cellForItem(at index: Int) -> UICollectionViewCell {
+        
+        let cellClass = MessageCell.self
+        
+        let cell = collectionContext!.dequeueReusableCell(of: cellClass,
+                                                          for: self,
+                                                          at: index)
+        
+        if let cell = cell as? MessageCell {
+            
+            cell.messageLabel.text = message.text
+            cell.titleLabel.text = message.user.name
+        }
+        
+        return cell
+    }
 }
