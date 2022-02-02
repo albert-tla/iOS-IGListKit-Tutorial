@@ -113,6 +113,7 @@ extension WeatherSectionController {
         collectionContext?.performBatch(animated: true, updates: { batchContext in
             
             self.expanded.toggle()
+            batchContext.reload(self)
         }, completion: nil)
     }
 }
