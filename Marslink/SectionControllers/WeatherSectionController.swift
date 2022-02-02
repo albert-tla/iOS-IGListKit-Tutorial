@@ -97,7 +97,8 @@ extension WeatherSectionController {
                 title = "Low"
                 detail = "\(weather.low) C"
             default:
-                <#code#>
+                title = "n/a"
+                detail = "n/a"
             }
         }
         
