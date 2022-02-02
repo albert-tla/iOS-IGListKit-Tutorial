@@ -58,6 +58,11 @@ extension JournalSectionController {
         
         let width = context.containerSize.width
         
+        if index == 0 {
+            return CGSize(width: width, height: 30)
+        } else {
+            return JournalEntryCell.cellSize(width: width, text: entry.text)
+        }
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
