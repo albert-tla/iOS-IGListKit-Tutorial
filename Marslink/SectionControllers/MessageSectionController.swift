@@ -70,4 +70,8 @@ extension MessageSectionController {
         
         return cell
     }
+    
+    override func didUpdate(to object: Any) {
+        message = object as? Message
+    }
 }
