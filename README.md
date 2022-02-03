@@ -9,7 +9,7 @@ By using IGListKit, we only need these steps:
 
 ## Build the Collection View
 
-Create a constant property of UICollectionView on the desired UIViewController. To customize it, it's recommended to create it with a closure for our own functionality where it returns a UICollectionView itself.
+Create a constant property of UICollectionView on the desired UIViewController. To customize it, it's recommended to create a custom functionality by using open curly brace as a start and end it with closed curly brace with a `()` to call our function, where it returns a UICollectionView itself.
 
 `
 let view: UICollectionView = {
@@ -19,7 +19,7 @@ let view: UICollectionView = {
     )
     view.backgroundColor = .black
     return view
-}
+}()
 `
 
 The code above creates a UICollectionView with a black background color. It also has a `.zero` frame, which also equals to:
