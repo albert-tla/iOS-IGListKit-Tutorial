@@ -52,8 +52,25 @@ There are three required parameters:
 
 The `updater` is the one who handles any updates on the ListAdapter. By default, use the `ListAdapterUpdater()`, I haven't deep dive is there any other `updater`, and I didn't found it at the [IGListKit official documentation](https://instagram.github.io/IGListKit/index.html).
 
-The `viewController` is to tell which UIViewController will have the created adapter. The definition can be found at the [official documentation](https://instagram.github.io/IGListKit/Classes/IGListAdapter.html#/c:objc(cs)IGListAdapter(py)viewController).
+The `viewController` is to tell which ViewController will have the created adapter. The definition can be found at the [official documentation](https://instagram.github.io/IGListKit/Classes/IGListAdapter.html#/c:objc(cs)IGListAdapter(py)viewController).
 
 The `workingRangeSize` is numbers of contents that doesn't appear in the UIView, and the ListAdapter wants to prepares it before comes to the screen. The number applies to the entrance and the exit of the range.
 
 For instance, we set the `workingRangeSize: 1`, then the ListAdapter prepares for one at both entrance and exit. The full description can be found at the [official documentation](https://instagram.github.io/IGListKit/getting-started.html#working-range).
+
+### Data Source
+
+When we set the predefined `adapter.dataSource = self`, the compiler will say error because the ViewController hasn't conform to the `ListAdapterDataSource`. In this tutorial, there are three main functions to be used:
+1. `objects(for listAdapter: ListAdapter) -> [ListDiffable]`
+2. `listAdapter(_ listAdapter: ListAdapter, sectionControllerFor objects: Any) -> ListSectionController`
+3. `emptyView(for listAdapter: ListAdapter) -> UIView? `
+
+The `objects` function is to set what kind of data you want to show at the data source. I assume we need to sort what data to show at the top until the bottom from this function.
+
+My assumption is based on the [tutorial when we add the Weather to the ListDiffable array](https://www.raywenderlich.com/9106-iglistkit-tutorial-better-uicollectionviews#toc-anchor-009). I didn't see anything about order in the [official documentation](https://instagram.github.io/IGListKit/Protocols/IGListAdapterDataSource.html#/c:objc(pl)IGListAdapterDataSource(im)objectsForListAdapter:).
+
+The `listAdapter` function will ask the data source to redirect to the SectionController. The `objects` parameter may be used to check whether it fits to the proper SectionController.
+
+Just as the tutorial, we implements an if-statements to check the `objects` parameter with each statement returns the fit SectionController. There are no other explanation in the [official documentation](https://instagram.github.io/IGListKit/Protocols/IGListAdapterDataSource.html#/c:objc(pl)IGListAdapterDataSource(im)listAdapter:sectionControllerForObject:).
+
+The `emptyView` function will ask the data source to show a UIView, as a background view, when the list is empty. Do note whenever the ListAdapter is updated, it also call this function, based on the [official documentation](https://instagram.github.io/IGListKit/Protocols/IGListAdapterDataSource.html#/c:objc(pl)IGListAdapterDataSource(im)emptyViewForListAdapter:).
