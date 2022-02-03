@@ -109,3 +109,12 @@ To use this overridden function, it has these steps:
 4. Return the cell.
 
 From four data provider functions above, the [official documentation](https://instagram.github.io/IGListKit/Classes/IGListSectionController.html) states, that four of them is not required to override it by calling `super`, except for the `cellForItem` function. It states we should not call `super` on it.
+
+# Questions I've Had
+
+1. Do we have to sort what data to show on the ListDiffable array?
+2. When creating the [JournalSectionController](https://www.raywenderlich.com/9106-iglistkit-tutorial-better-uicollectionviews#toc-anchor-007), the `numberOfItems` function has an implementation of `return 2`. But how does it returns four cells?
+
+# Acknowledgement
+
+Big thanks to [Randy Efan](https://github.com/randyefan1998), [Alnodi Adnan](https://github.com/alnodiadnan08), and [Aldo Leonardo](https://github.com/aldoleonardo) for referencing this tutorial to us.
